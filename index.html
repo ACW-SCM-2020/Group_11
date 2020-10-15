@@ -9,7 +9,54 @@
     
     <script>
 
+        var playerScore = 0;
+        var computerScore = 0;
+        // var gamesPlayed = 0;
+        var computerOptions = ["r", "p", "s"];
 
+
+      for (var i = 0; i < 11; i++) {
+
+        var playerChoice = prompt("Enter 'r' for rock, 'p' for paper, or 's' for scissors.");
+        
+        var computerChoice = computerOptions[Math.floor(Math.random() * 3)];
+
+        // if (playerChoice == "r" || playerChoice == "s" || playerChoice == "p") {
+
+            if (playerChoice == "r" && computerChoice == "s") {
+                alert("You win the game!");
+                playerScore++;
+            }
+            else if (playerChoice == "r" && computerChoice == "p") {
+                alert("You lose the game!");
+                computerScore++;
+            }
+            else if (playerChoice == "s" && computerChoice == "r") {
+                alert("You win the game!");
+                playerScore++;
+            }
+            else if (playerChoice == "s" && computerChoice == "p") {
+                alert("You lose the game!");
+                computerScore++;
+            }
+            else if (playerChoice == "p" && computerChoice == "r") {
+                alert("You win the game!");
+                playerScore++;
+            }
+            else if (playerChoice == "p" && computerChoice == "s") {
+                alert("You lose the game!");
+                computerScore++;
+            }
+            else {
+                alert("Tie!");
+            }
+
+      }
+        // gamesPlayed++;
+        
+
+
+        // console.log(computerChoice);
 
     </script>
 
